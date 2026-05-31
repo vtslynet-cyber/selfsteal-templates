@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src data:; base-uri 'none'; form-action 'none'; frame-ancestors 'none'">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Lumen — clear dashboards and reporting for small teams.">
+<title>Lumen — Reporting made simple</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:"Segoe UI",Arial,sans-serif;color:#1a1730;background:#fff;line-height:1.6}
+  a{text-decoration:none;color:inherit}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 26px}
+  header{position:sticky;top:0;background:rgba(255,255,255,.9);backdrop-filter:blur(8px);border-bottom:1px solid #eee9f5;z-index:5}
+  .nav{display:flex;justify-content:space-between;align-items:center;height:66px}
+  .logo{font-weight:800;font-size:20px;background:linear-gradient(90deg,#7b2ff7,#2f80ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+  nav a{margin-left:24px;color:#5c5773;font-size:15px}
+  .btn{display:inline-block;background:linear-gradient(90deg,#7b2ff7,#2f80ff);color:#fff;padding:10px 20px;border-radius:10px;font-weight:600;font-size:15px}
+  .hero{text-align:center;padding:100px 0 60px;background:radial-gradient(900px 400px at 50% -10%,#efe7ff,transparent)}
+  .tag{display:inline-block;background:#f1ecff;color:#7b2ff7;border-radius:30px;padding:6px 16px;font-size:13px;font-weight:600;margin-bottom:22px}
+  h1{font-size:52px;line-height:1.08;letter-spacing:-1px;max-width:760px;margin:0 auto}
+  .hero p{font-size:19px;color:#5c5773;max-width:540px;margin:20px auto 28px}
+  .dash{max-width:840px;margin:50px auto 0;background:#fff;border:1px solid #eee9f5;border-radius:18px;box-shadow:0 30px 60px -34px rgba(60,40,120,.5);padding:20px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px}
+  .kpi{background:#faf8ff;border:1px solid #f0ebfa;border-radius:12px;padding:18px;text-align:left}
+  .kpi .l{font-size:12px;color:#8a85a0;text-transform:uppercase;letter-spacing:.08em}
+  .kpi .v{font-size:28px;font-weight:800;margin-top:6px}
+  .kpi .v small{font-size:13px;color:#22a06b;font-weight:600}
+  .bars{grid-column:1/4;height:90px;display:flex;align-items:flex-end;gap:8px;padding:10px 4px 0}
+  .bars i{flex:1;background:linear-gradient(180deg,#7b2ff7,#2f80ff);border-radius:5px 5px 0 0;display:block}
+  @media(max-width:740px){h1{font-size:36px}.dash{grid-template-columns:1fr}.bars{grid-column:1}}
+  .features{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;padding:80px 0}
+  .feature{padding:24px;border:1px solid #eee9f5;border-radius:14px}
+  .feature h3{font-size:18px;margin-bottom:8px}
+  .feature p{color:#5c5773;font-size:15px}
+  @media(max-width:740px){.features{grid-template-columns:1fr}}
+  footer{border-top:1px solid #eee9f5;padding:34px 0;color:#8a85a0;font-size:14px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+  <div class="logo">Lumen</div>
+  <nav><a href="#features">Features</a><a href="#pricing">Pricing</a><a class="btn" href="#features">Get started</a></nav>
+</div></header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="tag">New &middot; weekly email digests</div>
+    <h1>All your numbers, on one calm screen.</h1>
+    <p>Lumen turns scattered spreadsheets into clean dashboards your whole team can actually read.</p>
+    <a class="btn" href="#features">Try the demo</a>
+    <div class="dash">
+      <div class="kpi"><div class="l">Active</div><div class="v">2,481 <small>+12%</small></div></div>
+      <div class="kpi"><div class="l">Revenue</div><div class="v">€38.2k <small>+6%</small></div></div>
+      <div class="kpi"><div class="l">Retention</div><div class="v">94% <small>+1%</small></div></div>
+      <div class="bars"><i style="height:40%"></i><i style="height:62%"></i><i style="height:48%"></i><i style="height:78%"></i><i style="height:66%"></i><i style="height:90%"></i><i style="height:72%"></i><i style="height:84%"></i></div>
+    </div>
+  </div>
+</section>
+
+<section class="wrap" id="features">
+  <div class="features">
+    <div class="feature"><h3>Connect once</h3><p>Bring in spreadsheets and files, then forget about the busywork.</p></div>
+    <div class="feature"><h3>Readable by anyone</h3><p>Dashboards designed for people who do not love charts.</p></div>
+    <div class="feature"><h3>Quiet alerts</h3><p>Get a nudge only when a number really moves.</p></div>
+  </div>
+</section>
+
+<footer class="wrap" id="pricing">
+  <div>&copy; 2026 Lumen &mdash; sample product, fictional data</div>
+  <div>hello@lumen.example</div>
+</footer>
+</body>
+</html>
