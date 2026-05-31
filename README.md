@@ -1,6 +1,4 @@
-# Набор из 15 статичны
-
-Набор из 15 статичных сайтов.
+# Набор из 15 статичных сайтов.
 
 ## Шаблоны
 | Папка | Язык | Тема / стиль |
@@ -30,3 +28,30 @@
 bash deploy.sh                # случайный шаблон
 bash deploy.sh 07-zh-tea      # конкретный шаблон
 bash deploy.sh --list         # список шаблонов
+```
+
+## Запуск на сервере
+
+Первый раз — склонировать репозиторий и поставить случайный шаблон:
+```bash
+git clone https://github.com/vtslynet-cyber/selfsteal-templates.git /opt/selfsteal-templates
+bash /opt/selfsteal-templates/deploy.sh
+```
+
+Дальше — обновить из git и сразу поставить случайный шаблон (одной командой):
+```bash
+bash /opt/selfsteal-templates/update.sh
+```
+
+Дополнительно:
+```bash
+bash /opt/selfsteal-templates/update.sh 07-zh-tea     # конкретный шаблон
+# автосмена случайного шаблона каждый день в 04:00:
+echo '0 4 * * * root /usr/bin/bash /opt/selfsteal-templates/update.sh >/dev/null 2>&1' > /etc/cron.d/selfsteal-rotate
+```
+
+Перед каждой заменой текущий сайт сохраняется в `/root/site.bak.<дата>` (хранятся последние 5). Откат:
+```bash
+rm -rf /var/www/site && mv /root/site.bak.ГГГГММДД-ЧЧММСС /var/www/site
+```
+> Веб-рут по умолчанию `/var/www/site`; изменить — `WEBROOT=/путь bash deploy.sh`.
